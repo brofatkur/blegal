@@ -1,47 +1,7 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { ai, MODEL_NAME } from "@/lib/gemini";
-import { Send, Loader2, Bot } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Hero() {
-  const [query, setQuery] = useState("");
-  const [response, setResponse] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  const handleAskAI = async () => {
-    if (!query.trim()) return;
-    setLoading(true);
-    setResponse("");
-    try {
-      const prompt = `
-        Anda adalah asisten legal AI dari B-Legal (PT Bonanza Tujuh Samudera).
-        Tugas Anda adalah membantu pengguna dengan pertanyaan seputar pendirian badan usaha (PT, CV, Yayasan) di Indonesia.
-        
-        Pertanyaan pengguna: "${query}"
-        
-        Panduan jawaban:
-        1. Jawab dengan singkat, padat, dan profesional.
-        2. Jika pengguna bertanya tentang ketersediaan nama PT, jelaskan bahwa nama PT harus 3 kata (untuk PT biasa) dan tidak boleh menggunakan bahasa asing (untuk PMDN). Berikan simulasi pengecekan sederhana, tapi tegaskan bahwa pengecekan resmi harus melalui sistem AHU.
-        3. Jika pengguna bertanya tentang modal, jelaskan kategori modal dasar (Kecil < 1M, Menengah 1-5M, Besar > 10M).
-        4. Arahkan pengguna untuk konsultasi lebih lanjut ke WhatsApp B-Legal jika butuh bantuan detail.
-        5. Gunakan bahasa Indonesia yang baik dan sopan.
-      `;
-
-      const result = await ai.models.generateContent({
-        model: MODEL_NAME,
-        contents: prompt,
-      });
-      const text = result.text;
-      setResponse(text || "Maaf, saya tidak dapat memberikan jawaban saat ini.");
-    } catch (error) {
-      console.error("AI Error:", error);
-      setResponse("Maaf, terjadi kesalahan saat memproses pertanyaan Anda. Silakan coba lagi atau hubungi kami via WhatsApp.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <section className="relative bg-brand-brown py-20 lg:py-32 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -92,7 +52,7 @@ export function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button size="lg" className="bg-brand-gold text-brand-brown hover:bg-white hover:text-brand-brown font-bold px-8 h-12 shadow-lg shadow-brand-gold/20 transition-all hover:scale-105" onClick={() => window.open("https://wa.me/62811392146", "_blank")}>
-                Konsultasi Gratis
+                Konsultasi WhatsApp
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-brown h-12 px-8 backdrop-blur-sm bg-white/5" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
                 Lihat Layanan
@@ -119,7 +79,7 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Image & AI Assistant */}
+          {/* Right Column: Image */}
           <div className="relative lg:h-[600px] flex flex-col items-center justify-end">
             {/* Background Blob */}
             <div className="absolute top-10 inset-x-10 bottom-0 bg-brand-gold/10 rounded-t-full blur-3xl" />
@@ -172,7 +132,7 @@ export function Hero() {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.9 }}
-                className="absolute bottom-32 -right-2 md:-right-6 bg-white p-3 rounded-xl shadow-xl z-20 border border-gray-100 text-center"
+                className="absolute bottom-10 -right-2 md:-right-6 bg-white p-3 rounded-xl shadow-xl z-20 border border-gray-100 text-center"
               >
                 <div className="flex justify-center gap-1 mb-1">
                    {[1,2,3,4,5].map(i => (
@@ -182,59 +142,6 @@ export function Hero() {
                 <p className="text-lg font-bold text-brand-brown leading-none">+10 Tahun</p>
                 <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Pengalaman</p>
               </motion.div>
-            </motion.div>
-
-            {/* AI Assistant Card - Floating Overlay */}
-            <motion.div 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.1 }}
-              className="absolute -bottom-12 left-0 right-0 z-30 mx-4"
-            >
-              <div className="bg-white/95 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl max-w-md mx-auto ring-1 ring-black/5">
-                <div className="flex items-center gap-3 mb-3 border-b border-gray-100 pb-3">
-                  <div className="p-1.5 bg-brand-gold rounded-lg shadow-sm">
-                    <Bot className="h-5 w-5 text-brand-brown" />
-                  </div>
-                  <div>
-                    <h3 className="text-gray-900 font-semibold text-sm">AI Legal Assistant</h3>
-                    <p className="text-[10px] text-gray-500">Online • Siap membantu</p>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="bg-gray-50 rounded-lg p-3 min-h-[80px] max-h-[120px] overflow-y-auto text-sm text-gray-700">
-                    {response ? (
-                      <div className="prose prose-sm max-w-none">
-                        <p>{response}</p>
-                      </div>
-                    ) : (
-                      <p className="text-gray-500 italic text-xs">
-                        "Halo! Saya asisten AI B-Legal. Cek syarat PT atau ketersediaan nama di sini."
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && handleAskAI()}
-                      placeholder="Tanya legalitas..."
-                      className="flex-1 bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold/50"
-                    />
-                    <Button 
-                      onClick={handleAskAI} 
-                      disabled={loading}
-                      size="sm"
-                      className="bg-brand-gold text-brand-brown hover:bg-brand-gold-light"
-                    >
-                      {loading ? <Loader2 className="h-3 w-3 animate-spin" /> : <Send className="h-3 w-3" />}
-                    </Button>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>

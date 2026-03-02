@@ -124,7 +124,7 @@ export function PricingTable() {
                 }`}
                 onClick={() => window.open(`https://wa.me/62811392146?text=Halo%20B-Legal,%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(item.name)}`, "_blank")}
               >
-                Pilih Paket
+                Konsultasi via WhatsApp
               </Button>
             </div>
           ))}

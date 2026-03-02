@@ -57,7 +57,7 @@ export function ServiceGrid() {
                 <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-xs text-gray-500">
                       <CheckCircle2 className="h-3 w-3 text-brand-gold mr-2" />
@@ -65,6 +65,13 @@ export function ServiceGrid() {
                     </li>
                   ))}
                 </ul>
+                <button 
+                  onClick={() => window.open(`https://wa.me/62811392146?text=Halo%20B-Legal,%20saya%20tertarik%20dengan%20layanan%20${encodeURIComponent(service.title)}`, "_blank")}
+                  className="text-brand-brown font-bold text-sm hover:text-brand-gold transition-colors flex items-center gap-2 group/btn"
+                >
+                  Konsultasi Sekarang
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
               </div>
             );
           })}
