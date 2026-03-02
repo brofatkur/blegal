@@ -46,7 +46,7 @@ export function BofficePromo() {
                {/* Placeholder for office image */}
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                <img 
-                src="https://picsum.photos/seed/office/800/600" 
+                src="https://i.ibb.co.com/21h0KSwS/Gemini-Generated-Image-xlaldmxlaldmxlal-1.png" 
                 alt="Boffice Virtual Office" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"

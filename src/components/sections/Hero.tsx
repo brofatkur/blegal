@@ -92,7 +92,7 @@ export function Hero() {
               className="relative z-10 w-full max-w-md mx-auto"
             >
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                src="https://i.ibb.co.com/KcBWDNRD/dreamina-2026-03-03-7297-A-professional-Indonesian-woman-in-her-e.jpg" 
                 alt="Professional Legal Consultant" 
                 className="w-full h-auto object-cover rounded-3xl shadow-2xl border-4 border-white/10 mask-image-gradient"
                 referrerPolicy="no-referrer"
