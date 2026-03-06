@@ -42,14 +42,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal / Social Proof */}
-          <div>
-            <h3 className="text-lg font-serif font-semibold text-brand-gold mb-4">Legalitas Partner</h3>
-            <div className="bg-white/5 p-4 rounded-lg border border-white/10">
-              <p className="text-sm text-gray-300 font-medium mb-1">Notaris Resmi</p>
-              <p className="text-brand-gold font-serif font-semibold">Bella Kharisma, S.H., M.Kn.</p>
-              <p className="text-xs text-gray-400 mt-1">SK AHU-00080.AH.02.01.TAHUN 2025</p>
-            </div>
+          {/* Google Maps */}
+          <div className="h-full min-h-[200px] rounded-lg overflow-hidden border border-white/10 shadow-lg">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              className="w-full h-full min-h-[200px]"
+              frameBorder="0" 
+              scrolling="no" 
+              marginHeight={0} 
+              marginWidth={0} 
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Jalan%20Dewi%20Sartika%20Nomor%202,%20Kuta,%20Badung,%20Bali,%20Indonesia,%2080361+(B-Legal)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              title="Lokasi Kantor B-Legal"
+            >
+            </iframe>
           </div>
         </div>
 

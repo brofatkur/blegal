@@ -5,7 +5,6 @@
 
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { PricingTable } from "@/components/sections/PricingTable";
 import { Workflow } from "@/components/sections/Workflow";
@@ -23,7 +22,6 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <TrustBar />
         <ServiceGrid />
         <PricingTable />
         <Workflow />
