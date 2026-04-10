@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Berapa lama proses pendirian PT?",
-    answer: "Proses pendirian PT standar memakan waktu 3-7 hari kerja setelah penandatanganan minuta akta. Untuk paket kilat, bisa selesai lebih cepat tergantung kelengkapan dokumen.",
+    answer: "Proses pendirian PT standar memakan waktu 14-20 hari kerja setelah penandatanganan minuta akta. Untuk paket kilat, bisa selesai lebih cepat tergantung kelengkapan dokumen.",
   },
   {
     question: "Apakah saya harus datang ke kantor notaris?",

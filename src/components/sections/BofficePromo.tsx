@@ -53,7 +53,7 @@ export function BofficePromo() {
                />
                <div className="absolute bottom-4 left-4 z-20">
                  <p className="text-brand-gold font-serif font-bold text-xl">Boffice Bali</p>
-                 <p className="text-white text-sm">Virtual Office mulai Rp 3jt/tahun</p>
+                 <p className="text-white text-sm">Virtual Office mulai Rp 5,9jt/tahun</p>
                </div>
             </div>
           </div>

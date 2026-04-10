@@ -18,7 +18,7 @@ const pricingItems = [
   },
   {
     name: "Pendirian PT (Modal < 1M)",
-    price: "12.000.000",
+    price: "9.700.000",
     description: "Paket Best Seller untuk Startup",
     features: [
       "Pengecekan Nama PT",
