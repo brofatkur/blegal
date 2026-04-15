@@ -69,9 +69,14 @@ export function PricingTable() {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-brown mb-4">
             Investasi Legalitas Terbaik
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
             Harga transparan, tanpa biaya tersembunyi. Semua paket sudah termasuk biaya PNBP pemerintah dan jasa notaris.
           </p>
+          <div className="inline-block bg-brand-gold/10 border border-brand-gold/30 rounded-lg px-6 py-3">
+            <p className="text-brand-brown font-semibold">
+              <span className="text-red-600 font-bold">PROMO 10%</span> — Harga spesial! Silahkan klaim dan nego langsung di WhatsApp.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -134,6 +139,7 @@ export function PricingTable() {
           <p className="text-sm text-gray-500 mb-4">Layanan Lainnya:</p>
           <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-brand-brown">
             <span className="bg-gray-100 px-4 py-2 rounded-full">PT Perorangan: Rp 3.000.000</span>
+            <span className="bg-gray-100 px-4 py-2 rounded-full">Firma: Rp 5.000.000</span>
             <span className="bg-gray-100 px-4 py-2 rounded-full">Yayasan: Rp 6.000.000</span>
             <span className="bg-gray-100 px-4 py-2 rounded-full">Koperasi: Rp 15.000.000</span>
             <span className="bg-gray-100 px-4 py-2 rounded-full">NIB Only: Rp 3.000.000</span>

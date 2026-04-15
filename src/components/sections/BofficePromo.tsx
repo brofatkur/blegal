@@ -29,6 +29,10 @@ export function BofficePromo() {
                 <Building className="h-4 w-4 text-brand-gold" />
                 <span>Fasilitas Meeting Room & Resepsionis</span>
               </li>
+              <li className="flex items-center gap-2 mt-2 bg-brand-gold/20 text-brand-gold px-3 py-1.5 rounded-md font-medium border border-brand-gold/30">
+                <span className="text-lg">🎉</span>
+                <span>Diskon 50% khusus untuk klien B-Legal!</span>
+              </li>
             </ul>
             <div className="pt-4">
               <Button 
