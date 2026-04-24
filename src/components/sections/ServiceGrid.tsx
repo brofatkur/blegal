@@ -66,7 +66,7 @@ export function ServiceGrid() {
                   ))}
                 </ul>
                 <button 
-                  onClick={() => window.open(`https://wa.me/62811392146?text=Halo%20B-Legal,%20saya%20tertarik%20dengan%20layanan%20${encodeURIComponent(service.title)}`, "_blank")}
+                  onClick={() => window.open(`https://app.linktochat.id/api/pr/blegal`, "_blank")}
                   className="text-brand-brown font-bold text-sm hover:text-brand-gold transition-colors flex items-center gap-2 group/btn"
                 >
                   Konsultasi Sekarang

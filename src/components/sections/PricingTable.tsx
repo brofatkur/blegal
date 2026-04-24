@@ -18,7 +18,7 @@ const pricingItems = [
   },
   {
     name: "Pendirian PT (Modal < 1M)",
-    price: "9.700.000",
+    price: "6.900.000",
     description: "Paket Best Seller untuk Startup",
     features: [
       "Pengecekan Nama PT",
@@ -28,12 +28,13 @@ const pricingItems = [
       "NIB Perorangan/Badan",
       "BNRI (Berita Negara)",
       "Gratis Konsultasi Pajak Awal",
+      "Bonus diskon 50% untuk Virtual Office"
     ],
     highlight: true,
   },
   {
     name: "Pendirian PT (Modal > 1M)",
-    price: "14.000.000",
+    price: "9.000.000",
     description: "Untuk Bisnis Skala Menengah",
     features: [
       "Semua fasilitas PT < 1M",
@@ -41,6 +42,7 @@ const pricingItems = [
       "Konsultasi Struktur Modal",
       "Drafting Perjanjian Pemegang Saham",
       "Layanan Antar Dokumen (Bali Area)",
+      "Bonus Virtual Office"
     ],
     highlight: false,
   },
@@ -127,7 +129,7 @@ export function PricingTable() {
                     ? "bg-brand-brown hover:bg-brand-brown-light text-white" 
                     : "bg-gray-100 hover:bg-gray-200 text-gray-900"
                 }`}
-                onClick={() => window.open(`https://wa.me/62811392146?text=Halo%20B-Legal,%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(item.name)}`, "_blank")}
+                onClick={() => window.open(`https://app.linktochat.id/api/pr/blegal`, "_blank")}
               >
                 Konsultasi via WhatsApp
               </Button>

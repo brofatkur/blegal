@@ -5,7 +5,7 @@ export function BottomNav() {
     { name: "Home", href: "#home", icon: Home },
     { name: "Services", href: "#services", icon: Briefcase },
     { name: "Price", href: "#pricing", icon: DollarSign },
-    { name: "Chat", href: "https://wa.me/62811392146", icon: MessageCircle, external: true },
+    { name: "Chat", href: "https://app.linktochat.id/api/pr/blegal", icon: MessageCircle, external: true },
   ];
 
   return (

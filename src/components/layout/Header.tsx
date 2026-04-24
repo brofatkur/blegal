@@ -35,7 +35,7 @@ export function Header() {
               {item.name}
             </a>
           ))}
-          <Button variant="default" size="sm" onClick={() => window.open("https://wa.me/62811392146", "_blank")}>
+          <Button variant="default" size="sm" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
             Consult Now
           </Button>
         </nav>
@@ -63,7 +63,7 @@ export function Header() {
                 {item.name}
               </a>
             ))}
-            <Button className="w-full" onClick={() => window.open("https://wa.me/62811392146", "_blank")}>
+            <Button className="w-full" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
               Consult Now
             </Button>
           </nav>

@@ -33,7 +33,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-brand-gold shrink-0" />
-                <a href="https://wa.me/62811392146" className="hover:text-white transition-colors">0811392146</a>
+                <a href="https://app.linktochat.id/api/pr/blegal" className="hover:text-white transition-colors">0811392146</a>
               </li>
               <li className="flex items-center gap-3">
                 <Globe className="h-5 w-5 text-brand-gold shrink-0" />
