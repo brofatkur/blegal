@@ -322,17 +322,16 @@ export function RdtrPage() {
 
           <div className="iframe-wrapper">
             <iframe
-              src="https://oss.go.id/rdtrinteraktif/"
+              src="https://gistaru.atrbpn.go.id/rdtrinteraktif/"
               title="RDTR Interaktif - GISTARU Kementerian ATR/BPN"
               loading="lazy"
-              allow="geolocation"
-              allowFullScreen
+              allow="geolocation; fullscreen"
               referrerPolicy="no-referrer-when-downgrade">
             </iframe>
 
             <div className="iframe-fallback">
               <span>Tidak bisa berinteraksi dengan peta? Buka aplikasi di tab baru.</span>
-              <a href="https://oss.go.id/rdtrinteraktif/" target="_blank" rel="noopener noreferrer">
+              <a href="https://gistaru.atrbpn.go.id/rdtrinteraktif/" target="_blank" rel="noopener noreferrer">
                 Buka di tab baru &rarr;
               </a>
             </div>
