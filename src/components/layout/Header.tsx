@@ -6,10 +6,11 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Home", href: "/#home" },
+    { name: "Services", href: "/#services" },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "FAQ", href: "/#faq" },
+    { name: "Cek RDTR Interaktif", href: "/cek-kbli-terbaru" },
   ];
 
   return (

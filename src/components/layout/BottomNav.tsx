@@ -2,9 +2,9 @@ import { Home, Briefcase, DollarSign, MessageCircle } from "lucide-react";
 
 export function BottomNav() {
   const navItems = [
-    { name: "Home", href: "#home", icon: Home },
-    { name: "Services", href: "#services", icon: Briefcase },
-    { name: "Price", href: "#pricing", icon: DollarSign },
+    { name: "Home", href: "/#home", icon: Home },
+    { name: "Services", href: "/#services", icon: Briefcase },
+    { name: "Price", href: "/#pricing", icon: DollarSign },
     { name: "Chat", href: "https://app.linktochat.id/api/pr/blegal", icon: MessageCircle, external: true },
   ];
 
