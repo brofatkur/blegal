@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 export function RdtrPage() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "B-Legal | Cek RDTR Interaktif";
     const metaDesc = document.querySelector('meta[name="description"]');
     const oldDesc = metaDesc?.getAttribute("content");
@@ -321,7 +322,7 @@ export function RdtrPage() {
 
           <div className="iframe-wrapper">
             <iframe
-              src="https://gistaru.atrbpn.go.id/rdtrinteraktif/"
+              src="https://oss.go.id/rdtrinteraktif/"
               title="RDTR Interaktif - GISTARU Kementerian ATR/BPN"
               loading="lazy"
               allow="geolocation"
@@ -331,7 +332,7 @@ export function RdtrPage() {
 
             <div className="iframe-fallback">
               <span>Tidak bisa berinteraksi dengan peta? Buka aplikasi di tab baru.</span>
-              <a href="https://gistaru.atrbpn.go.id/rdtrinteraktif/" target="_blank" rel="noopener noreferrer">
+              <a href="https://oss.go.id/rdtrinteraktif/" target="_blank" rel="noopener noreferrer">
                 Buka di tab baru &rarr;
               </a>
             </div>

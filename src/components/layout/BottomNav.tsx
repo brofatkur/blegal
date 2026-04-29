@@ -1,4 +1,5 @@
 import { Home, Briefcase, DollarSign, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function BottomNav() {
   const navItems = [
@@ -13,17 +14,31 @@ export function BottomNav() {
       <div className="flex justify-around items-center h-16">
         {navItems.map((item) => {
           const Icon = item.icon;
+          
+          if (item.external) {
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center w-full h-full text-gray-500 hover:text-brand-brown active:text-brand-brown transition-colors"
+              >
+                <Icon className="h-5 w-5 mb-1" />
+                <span className="text-[10px] font-medium">{item.name}</span>
+              </a>
+            );
+          }
+
           return (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noopener noreferrer" : undefined}
+              to={item.href}
               className="flex flex-col items-center justify-center w-full h-full text-gray-500 hover:text-brand-brown active:text-brand-brown transition-colors"
             >
               <Icon className="h-5 w-5 mb-1" />
               <span className="text-[10px] font-medium">{item.name}</span>
-            </a>
+            </Link>
           );
         })}
       </div>

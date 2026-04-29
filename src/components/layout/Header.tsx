@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/Button";
 
 export function Header() {
@@ -16,25 +17,25 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img 
             src="https://i.ibb.co.com/pvbhdqQ1/Screenshot-2026-03-02-at-16-18-47-removebg-preview.png" 
             alt="B-Legal Logo" 
             className="h-10 w-auto object-contain" 
             referrerPolicy="no-referrer"
           />
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="text-sm font-medium text-gray-600 hover:text-brand-brown transition-colors"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
           <Button variant="default" size="sm" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
             Consult Now
@@ -55,14 +56,14 @@ export function Header() {
         <div className="md:hidden border-t bg-white p-4">
           <nav className="flex flex-col gap-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-sm font-medium text-gray-600 hover:text-brand-brown"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button className="w-full" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
               Consult Now
