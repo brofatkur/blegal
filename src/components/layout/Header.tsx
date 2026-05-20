@@ -11,7 +11,8 @@ export function Header() {
     { name: "Services", href: "/#services" },
     { name: "Pricing", href: "/#pricing" },
     { name: "FAQ", href: "/#faq" },
-    { name: "Cek RDTR Interaktif", href: "/cek-kbli-terbaru" },
+    { name: "Cek RDTR", href: "/cek-kbli-terbaru" },
+    { name: "Cek Nama PT", href: "/cek-nama-pt" },
   ];
 
   return (
