@@ -27,7 +27,6 @@ const pricingItems = [
       "NPWP Badan & SKT",
       "NIB Perorangan/Badan",
       "BNRI (Berita Negara)",
-      "Gratis Konsultasi Pajak Awal",
       "Bonus diskon 50% untuk Virtual Office"
     ],
     highlight: true,
@@ -56,7 +55,6 @@ const pricingItems = [
       "SK Kemenkumham",
       "NPWP PMA",
       "NIB & Izin Usaha OSS",
-      "Konsultasi Laporan LKPM",
     ],
     highlight: false,
     discount: "20%",
