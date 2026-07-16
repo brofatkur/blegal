@@ -17,6 +17,8 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { BofficePromo } from "@/components/sections/BofficePromo";
 import { RdtrPage } from "@/components/sections/RdtrPage";
 import { CekNamaPage } from "@/components/sections/CekNamaPage";
+import { PMALandingPage } from "@/components/sections/PMALandingPage";
+import { CekKbliPage } from "@/components/sections/CekKbliPage";
 
 export default function App() {
   return (
@@ -37,7 +39,20 @@ export default function App() {
               </>
             } />
             <Route path="/cek-kbli-terbaru" element={<RdtrPage />} />
+            <Route path="/cek-kbli" element={<CekKbliPage />} />
             <Route path="/cek-nama-pt" element={<CekNamaPage />} />
+            <Route path="/pma" element={<PMALandingPage />} />
+            <Route path="/en" element={
+              <>
+                <Hero lang="en" />
+                <ServiceGrid lang="en" />
+                <PricingTable lang="en" />
+                <Workflow lang="en" />
+                <Testimonials lang="en" />
+                <BofficePromo lang="en" />
+                <FAQ lang="en" />
+              </>
+            } />
           </Routes>
         </main>
         <Footer />

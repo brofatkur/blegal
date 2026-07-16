@@ -1,33 +1,57 @@
 import { Star, User } from "lucide-react";
 
-const reviews = [
-  {
-    name: "Budi Santoso",
-    role: "Founder Startup Teknologi",
-    content: "Pelayanan sangat cepat dan profesional. PT saya selesai dalam waktu 3 hari kerja. Sangat recommended!",
-    rating: 5,
-  },
-  {
-    name: "Siti Aminah",
-    role: "Pemilik Butik Online",
-    content: "Awalnya bingung mau bikin CV atau PT, tapi setelah konsultasi jadi paham. Terima kasih B-Legal!",
-    rating: 5,
-  },
-  {
-    name: "Andi Wijaya",
-    role: "Kontraktor",
-    content: "Harga transparan, tidak ada biaya tambahan di tengah jalan. Dokumen lengkap dan rapi.",
-    rating: 5,
-  },
-];
+export function Testimonials({ lang = 'id' }: { lang?: 'id' | 'en' }) {
+  const t = {
+    title: lang === 'en' ? 'What They Say' : 'Apa Kata Mereka?',
+    subtitle: lang === 'en' ? 'Based on Google Reviews' : 'Berdasarkan ulasan pelanggan di Google Reviews',
+  };
 
-export function Testimonials() {
+  const reviews = lang === 'en' ? [
+    {
+      name: "Budi Santoso",
+      role: "Tech Startup Founder",
+      content: "Very fast and professional service. My PT was completed in 3 working days. Highly recommended!",
+      rating: 5,
+    },
+    {
+      name: "Siti Aminah",
+      role: "Online Boutique Owner",
+      content: "Initially confused whether to establish a CV or PT, but after consulting I understood perfectly. Thank you B-Legal!",
+      rating: 5,
+    },
+    {
+      name: "Andi Wijaya",
+      role: "Contractor",
+      content: "Transparent pricing, no hidden costs. The documents are complete and well organized.",
+      rating: 5,
+    },
+  ] : [
+    {
+      name: "Budi Santoso",
+      role: "Founder Startup Teknologi",
+      content: "Pelayanan sangat cepat dan profesional. PT saya selesai dalam waktu 3 hari kerja. Sangat recommended!",
+      rating: 5,
+    },
+    {
+      name: "Siti Aminah",
+      role: "Pemilik Butik Online",
+      content: "Awalnya bingung mau bikin CV atau PT, tapi setelah konsultasi jadi paham. Terima kasih B-Legal!",
+      rating: 5,
+    },
+    {
+      name: "Andi Wijaya",
+      role: "Kontraktor",
+      content: "Harga transparan, tidak ada biaya tambahan di tengah jalan. Dokumen lengkap dan rapi.",
+      rating: 5,
+    },
+  ];
+
   return (
     <section className="py-20 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-brown mb-4">
-            Apa Kata Mereka?
+            {t.title}
           </h2>
           <div className="flex items-center justify-center gap-2 mb-2">
             <div className="flex">
@@ -38,7 +62,7 @@ export function Testimonials() {
             <span className="text-xl font-bold text-gray-900">4.9/5.0</span>
           </div>
           <p className="text-sm text-gray-500">
-            Berdasarkan ulasan pelanggan di Google Reviews
+            {t.subtitle}
           </p>
         </div>
 

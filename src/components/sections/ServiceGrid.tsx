@@ -27,21 +27,54 @@ const services = [
   },
 ];
 
-export function ServiceGrid() {
+export function ServiceGrid({ lang = 'id' }: { lang?: 'id' | 'en' }) {
+  const t = {
+    title: lang === 'en' ? 'Comprehensive Legal Services' : 'Layanan Legalitas Terlengkap',
+    desc: lang === 'en' ? 'We provide end-to-legal business solutions. Focus on growing your business, let us handle the paperwork.' : 'Kami menyediakan solusi legalitas bisnis dari hulu ke hilir. Fokus kembangkan bisnis Anda, biarkan kami yang urus dokumennya.',
+    btn: lang === 'en' ? 'Consult Now' : 'Konsultasi Sekarang'
+  };
+
+  const currentServices = lang === 'en' ? [
+    {
+      title: "PT Establishment",
+      description: "Legal entity with limited liability, personal asset protection, and high credibility.",
+      icon: Building2,
+      features: ["Ministry Approval (SK)", "Notary Deed", "NIB & Tax ID (NPWP)"],
+    },
+    {
+      title: "CV Establishment",
+      description: "Business entity solution for medium capital with faster and more cost-effective processing.",
+      icon: Users,
+      features: ["Deed of Establishment", "Registered SK", "NIB & Tax ID (NPWP)"],
+    },
+    {
+      title: "Foundation (Yayasan)",
+      description: "Legal entity for social, religious, and humanitarian activities.",
+      icon: Scale,
+      features: ["Notary Deed", "Ministry Approval", "Operational License"],
+    },
+    {
+      title: "Licenses (NIB & OSS)",
+      description: "Process your Business Identification Number (NIB) and operational licenses via OSS RBA.",
+      icon: FileText,
+      features: ["NIB RBA", "Standard Certificate", "Location Permit"],
+    }
+  ] : services;
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-brown mb-4">
-            Layanan Legalitas Terlengkap
+            {t.title}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Kami menyediakan solusi legalitas bisnis dari hulu ke hilir. Fokus kembangkan bisnis Anda, biarkan kami yang urus dokumennya.
+            {t.desc}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => {
+          {currentServices.map((service, index) => {
             const Icon = service.icon;
             return (
               <div 
@@ -69,7 +102,7 @@ export function ServiceGrid() {
                   onClick={() => window.open(`https://app.linktochat.id/api/pr/blegal`, "_blank")}
                   className="text-brand-brown font-bold text-sm hover:text-brand-gold transition-colors flex items-center gap-2 group/btn"
                 >
-                  Konsultasi Sekarang
+                  {t.btn}
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right group-hover/btn:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </button>
               </div>

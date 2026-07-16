@@ -1,7 +1,28 @@
 import { MessageSquare, FileCheck, ShieldCheck } from "lucide-react";
 
-export function Workflow() {
-  const steps = [
+export function Workflow({ lang = 'id' }: { lang?: 'id' | 'en' }) {
+  const t = {
+    title: lang === 'en' ? '3 Easy Steps' : '3 Langkah Mudah',
+    desc: lang === 'en' ? 'Setting up a business entity has never been this easy. Save time, energy, and costs.' : 'Proses pendirian badan usaha tidak pernah semudah ini. Hemat waktu, tenaga, dan biaya.',
+  };
+
+  const steps = lang === 'en' ? [
+    {
+      icon: MessageSquare,
+      title: "1. Free Consultation",
+      description: "Discuss your business needs with our expert team. We will recommend the most suitable business entity.",
+    },
+    {
+      icon: FileCheck,
+      title: "2. Send Digital Data",
+      description: "Simply send a photo of your ID card, tax ID, and other supporting data via WhatsApp or Email. No need to visit the office.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "3. Documents Ready",
+      description: "We process your legality to completion. Physical documents will be sent securely to your address.",
+    },
+  ] : [
     {
       icon: MessageSquare,
       title: "1. Konsultasi Gratis",
@@ -24,10 +45,10 @@ export function Workflow() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold mb-4">
-            3 Langkah Mudah
+            {t.title}
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Proses pendirian badan usaha tidak pernah semudah ini. Hemat waktu, tenaga, dan biaya.
+            {t.desc}
           </p>
         </div>
 

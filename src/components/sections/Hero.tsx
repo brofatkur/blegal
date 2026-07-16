@@ -1,7 +1,25 @@
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 
-export function Hero() {
+export function Hero({ lang = 'id' }: { lang?: 'id' | 'en' }) {
+  const t = {
+    badge: lang === 'en' ? 'Trusted Legal Partner #1 in Bali' : 'Partner Legalitas Terpercaya #1 di Bali',
+    titleLine1: lang === 'en' ? 'Business Legality' : 'Legalitas Bisnis',
+    titleLine2: lang === 'en' ? 'Hassle-Free' : 'Tanpa Ribet',
+    titleLine3: lang === 'en' ? 'Focus on Profit!' : 'Fokus Cuan!',
+    desc: lang === 'en' 
+      ? 'Set up your PT, CV, Foundation, and business licenses quickly, safely, and reliably with B-Legal. We handle the paperwork, you focus on growing your business.' 
+      : 'Urus pendirian PT, CV, Yayasan, dan perizinan bisnis Anda dengan cepat, aman, dan terpercaya bersama B-Legal. Kami urus dokumennya, Anda fokus kembangkan bisnisnya.',
+    btnConsult: lang === 'en' ? 'WhatsApp Consultation' : 'Konsultasi WhatsApp',
+    btnServices: lang === 'en' ? 'View Services' : 'Lihat Layanan',
+    proofNum: lang === 'en' ? '1,000+ Entrepreneurs' : '1,000+ Pengusaha',
+    proofText: lang === 'en' ? 'Have trusted us with their legality' : 'Telah mempercayakan legalitasnya',
+    successText: lang === 'en' ? 'Successful Businesses' : 'Bisnis Sukses',
+    certifiedText: lang === 'en' ? 'Certified Consultant' : 'Konsultan Tersertifikasi',
+    expYear: lang === 'en' ? '+10 Years' : '+10 Tahun',
+    expText: lang === 'en' ? 'EXPERIENCE' : 'PENGALAMAN'
+  };
+
   return (
     <section className="relative bg-brand-brown py-20 lg:py-32 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -32,30 +50,30 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-gold/20 border border-brand-gold/30 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
-              <span className="text-brand-gold text-sm font-medium tracking-wide">Partner Legalitas Terpercaya #1 di Bali</span>
+              <span className="text-brand-gold text-sm font-medium tracking-wide">{t.badge}</span>
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-serif font-bold leading-tight drop-shadow-lg text-white">
-              Legalitas Bisnis <br/>
+              {t.titleLine1} <br/>
               <span className="text-brand-gold relative inline-block">
-                Tanpa Ribet
+                {t.titleLine2}
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-brand-gold opacity-40" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
                 </svg>
               </span>, <br/>
-              <span className="text-brand-gold">Fokus Cuan!</span>
+              <span className="text-brand-gold">{t.titleLine3}</span>
             </h1>
             
             <p className="text-lg text-gray-100 max-w-xl leading-relaxed font-light">
-              Urus pendirian PT, CV, Yayasan, dan perizinan bisnis Anda dengan cepat, aman, dan terpercaya bersama B-Legal. Kami urus dokumennya, Anda fokus kembangkan bisnisnya.
+              {t.desc}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button size="lg" className="bg-brand-gold text-brand-brown hover:bg-white hover:text-brand-brown font-bold px-8 h-12 shadow-lg shadow-brand-gold/20 transition-all hover:scale-105" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
-                Konsultasi WhatsApp
+                {t.btnConsult}
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-brown h-12 px-8 backdrop-blur-sm bg-white/5" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-                Lihat Layanan
+                {t.btnServices}
               </Button>
             </div>
 
@@ -73,8 +91,8 @@ export function Hero() {
                 ))}
               </div>
               <div className="text-sm">
-                <p className="text-white font-bold">1,000+ Pengusaha</p>
-                <p className="text-gray-300 text-xs">Telah mempercayakan legalitasnya</p>
+                <p className="text-white font-bold">{t.proofNum}</p>
+                <p className="text-gray-300 text-xs">{t.proofText}</p>
               </div>
             </div>
           </motion.div>
@@ -110,7 +128,7 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="text-xl md:text-2xl font-bold text-brand-brown font-serif">+1,000</p>
-                  <p className="text-xs md:text-sm text-gray-600 font-medium">Bisnis Sukses</p>
+                  <p className="text-xs md:text-sm text-gray-600 font-medium">{t.successText}</p>
                 </div>
               </motion.div>
 
@@ -124,7 +142,7 @@ export function Hero() {
                 <div className="bg-green-100 p-1 rounded-full">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-green-600"><path d="M20 6 9 17l-5-5"/></svg>
                 </div>
-                <p className="text-sm font-bold text-gray-800">Konsultan Tersertifikasi</p>
+                <p className="text-sm font-bold text-gray-800">{t.certifiedText}</p>
               </motion.div>
 
                {/* Badge 3: Experience (Bottom Right) */}
@@ -139,8 +157,8 @@ export function Hero() {
                      <svg key={i} xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#D4AF37" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                    ))}
                 </div>
-                <p className="text-lg font-bold text-brand-brown leading-none">+10 Tahun</p>
-                <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Pengalaman</p>
+                <p className="text-lg font-bold text-brand-brown leading-none">{t.expYear}</p>
+                <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">{t.expText}</p>
               </motion.div>
             </motion.div>
           </div>
