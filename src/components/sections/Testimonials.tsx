@@ -10,7 +10,7 @@ export function Testimonials({ lang = 'id' }: { lang?: 'id' | 'en' }) {
     {
       name: "Budi Santoso",
       role: "Tech Startup Founder",
-      content: "Very fast and professional service. My PT was completed in 3 working days. Highly recommended!",
+      content: "Very professional service. My PT was completed within the estimated time. Highly recommended!",
       rating: 5,
     },
     {
@@ -29,7 +29,7 @@ export function Testimonials({ lang = 'id' }: { lang?: 'id' | 'en' }) {
     {
       name: "Budi Santoso",
       role: "Founder Startup Teknologi",
-      content: "Pelayanan sangat cepat dan profesional. PT saya selesai dalam waktu 3 hari kerja. Sangat recommended!",
+      content: "Pelayanan sangat baik dan profesional. PT saya selesai sesuai estimasi waktu. Sangat recommended!",
       rating: 5,
     },
     {

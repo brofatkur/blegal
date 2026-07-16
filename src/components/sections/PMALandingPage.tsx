@@ -35,7 +35,7 @@ export function PMALandingPage() {
               </Button>
               <div className="flex items-center gap-2 text-sm text-gray-500 mt-2 sm:mt-0">
                 <Shield className="w-4 h-4 text-green-600" />
-                <span>100% Legal Guarantee</span>
+                <span>100% Legal Compliance</span>
               </div>
             </div>
           </div>
@@ -194,7 +194,7 @@ export function PMALandingPage() {
                   <li className="flex gap-3">
                     <Clock className="w-6 h-6 text-brand-gold opacity-80" />
                     <div>
-                      <div className="font-bold">Fast Processing</div>
+                      <div className="font-bold">Standard Processing</div>
                       <div className="text-sm text-gray-400">10-14 Working Days</div>
                     </div>
                   </li>

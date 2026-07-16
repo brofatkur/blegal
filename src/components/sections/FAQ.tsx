@@ -8,11 +8,11 @@ import {
 const faqs = [
   {
     question: "Berapa lama proses pendirian PT?",
-    answer: "Proses pendirian PT standar memakan waktu 14-20 hari kerja setelah penandatanganan minuta akta. Untuk paket kilat, bisa selesai lebih cepat tergantung kelengkapan dokumen.",
+    answer: "Proses pendirian PT memakan waktu 14-20 hari kerja setelah penandatanganan minuta akta, bergantung pada kelengkapan dokumen yang disyaratkan.",
   },
   {
     question: "Apakah saya harus datang ke kantor notaris?",
-    answer: "Tidak wajib. Kami menyediakan layanan tanda tangan sirkuler atau penghadapan via video call (sesuai kebijakan notaris rekanan) untuk memudahkan Anda yang berada di luar kota.",
+    answer: "Tidak wajib. Kami menyediakan layanan tanda tangan sirkuler atau penghadapan via video call (sesuai kebijakan notaris rekanan) sebagai alternatif bagi Anda yang berada di luar kota.",
   },
   {
     question: "Apakah data saya aman?",
@@ -41,7 +41,7 @@ export function FAQ({ lang = 'id' }: { lang?: 'id' | 'en' }) {
   const currentFaqs = lang === 'en' ? [
     {
       question: "How long does the PT establishment process take?",
-      answer: "The standard PT establishment process takes 14-20 working days after signing the deed minutes. For express packages, it can be completed faster depending on document completeness.",
+      answer: "The PT establishment process takes 14-20 working days after signing the deed minutes, depending on document completeness.",
     },
     {
       question: "Do I have to come to the notary's office?",
@@ -49,7 +49,7 @@ export function FAQ({ lang = 'id' }: { lang?: 'id' | 'en' }) {
     },
     {
       question: "Is my data safe?",
-      answer: "Very safe. We guarantee the confidentiality of client data and only use it for legality processing. We work with officially registered Notaries.",
+      answer: "Very safe. We maintain the confidentiality of client data and only use it for legality processing. We work with officially registered Notaries.",
     },
     {
       question: "What is the difference between an Individual PT and a Regular PT?",

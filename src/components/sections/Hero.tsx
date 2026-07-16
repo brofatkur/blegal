@@ -5,11 +5,11 @@ export function Hero({ lang = 'id' }: { lang?: 'id' | 'en' }) {
   const t = {
     badge: lang === 'en' ? 'Trusted Legal Partner #1 in Bali' : 'Partner Legalitas Terpercaya #1 di Bali',
     titleLine1: lang === 'en' ? 'Business Legality' : 'Legalitas Bisnis',
-    titleLine2: lang === 'en' ? 'Hassle-Free' : 'Tanpa Ribet',
-    titleLine3: lang === 'en' ? 'Focus on Profit!' : 'Fokus Cuan!',
+    titleLine2: lang === 'en' ? 'Professional' : 'Profesional',
+    titleLine3: lang === 'en' ? 'Focus on Business!' : 'Fokus Bisnis!',
     desc: lang === 'en' 
-      ? 'Set up your PT, CV, Foundation, and business licenses quickly, safely, and reliably with B-Legal. We handle the paperwork, you focus on growing your business.' 
-      : 'Urus pendirian PT, CV, Yayasan, dan perizinan bisnis Anda dengan cepat, aman, dan terpercaya bersama B-Legal. Kami urus dokumennya, Anda fokus kembangkan bisnisnya.',
+      ? 'Set up your PT, CV, Foundation, and business licenses safely and professionally with B-Legal. We handle the paperwork, you focus on growing your business.' 
+      : 'Urus pendirian PT, CV, Yayasan, dan perizinan bisnis Anda dengan aman dan profesional bersama B-Legal. Kami urus dokumennya, Anda fokus kembangkan bisnisnya.',
     btnConsult: lang === 'en' ? 'WhatsApp Consultation' : 'Konsultasi WhatsApp',
     btnServices: lang === 'en' ? 'View Services' : 'Lihat Layanan',
     proofNum: lang === 'en' ? '1,000+ Entrepreneurs' : '1,000+ Pengusaha',

@@ -9,7 +9,7 @@ const services = [
   },
   {
     title: "Pendirian CV",
-    description: "Solusi badan usaha untuk modal menengah dengan proses lebih cepat dan hemat.",
+    description: "Solusi badan usaha untuk modal menengah dengan proses yang sesuai dengan regulasi dan ketentuan.",
     icon: Users,
     features: ["Akta Pendirian", "SK Terdaftar", "NIB & NPWP"],
   },
@@ -43,7 +43,7 @@ export function ServiceGrid({ lang = 'id' }: { lang?: 'id' | 'en' }) {
     },
     {
       title: "CV Establishment",
-      description: "Business entity solution for medium capital with faster and more cost-effective processing.",
+      description: "Business entity solution for medium capital with efficient processing according to regulations.",
       icon: Users,
       features: ["Deed of Establishment", "Registered SK", "NIB & Tax ID (NPWP)"],
     },

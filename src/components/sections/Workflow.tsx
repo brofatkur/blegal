@@ -2,8 +2,8 @@ import { MessageSquare, FileCheck, ShieldCheck } from "lucide-react";
 
 export function Workflow({ lang = 'id' }: { lang?: 'id' | 'en' }) {
   const t = {
-    title: lang === 'en' ? '3 Easy Steps' : '3 Langkah Mudah',
-    desc: lang === 'en' ? 'Setting up a business entity has never been this easy. Save time, energy, and costs.' : 'Proses pendirian badan usaha tidak pernah semudah ini. Hemat waktu, tenaga, dan biaya.',
+    title: lang === 'en' ? '3 Step Process' : '3 Langkah Proses',
+    desc: lang === 'en' ? 'We guide you through every step of the business entity setup process according to regulations.' : 'Kami mendampingi Anda di setiap tahap proses pendirian badan usaha sesuai ketentuan yang berlaku.',
   };
 
   const steps = lang === 'en' ? [
