@@ -69,7 +69,7 @@ export function Hero({ lang = 'id' }: { lang?: 'id' | 'en' }) {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button size="lg" className="bg-brand-gold text-brand-brown hover:bg-white hover:text-brand-brown font-bold px-8 h-12 shadow-lg shadow-brand-gold/20 transition-all hover:scale-105" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
+              <Button size="lg" className="bg-brand-gold text-brand-brown hover:bg-white hover:text-brand-brown font-bold px-8 h-12 shadow-lg shadow-brand-gold/20 transition-all hover:scale-105" onClick={() => window.open("https://wa.me/62816570755", "_blank")}>
                 {t.btnConsult}
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-brown h-12 px-8 backdrop-blur-sm bg-white/5" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>

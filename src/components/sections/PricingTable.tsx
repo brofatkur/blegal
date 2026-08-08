@@ -193,7 +193,7 @@ export function PricingTable({ lang = 'id' }: { lang?: 'id' | 'en' }) {
                     ? "bg-brand-brown hover:bg-brand-brown-light text-white" 
                     : "bg-gray-100 hover:bg-gray-200 text-gray-900"
                 }`}
-                onClick={() => window.open(`https://app.linktochat.id/api/pr/blegal`, "_blank")}
+                onClick={() => window.open(`https://wa.me/62816570755`, "_blank")}
               >
                 {t.btn}
               </Button>

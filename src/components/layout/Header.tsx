@@ -72,7 +72,7 @@ export function Header() {
               <Globe className="h-4 w-4" />
               <span>{isEn ? "EN" : "ID"}</span>
             </button>
-            <Button variant="default" size="sm" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
+            <Button variant="default" size="sm" onClick={() => window.open("https://wa.me/62816570755", "_blank")}>
               Consult Now
             </Button>
           </div>
@@ -110,7 +110,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button className="w-full mt-2" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
+            <Button className="w-full mt-2" onClick={() => window.open("https://wa.me/62816570755", "_blank")}>
               Consult Now
             </Button>
           </nav>

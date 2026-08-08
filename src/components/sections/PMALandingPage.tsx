@@ -29,7 +29,7 @@ export function PMALandingPage() {
               <Button 
                 size="lg" 
                 className="w-full sm:w-auto text-lg px-8 py-6"
-                onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}
+                onClick={() => window.open("https://wa.me/62816570755", "_blank")}
               >
                 Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -127,7 +127,7 @@ export function PMALandingPage() {
               </ul>
               <div className="mt-10 pt-8 border-t border-[#3a3430]">
                 <p className="text-sm text-gray-400 mb-4">Unsure about your documents or business classification?</p>
-                <Button variant="outline" className="w-full border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-[#1a1614]" onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}>
+                <Button variant="outline" className="w-full border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-[#1a1614]" onClick={() => window.open("https://wa.me/62816570755", "_blank")}>
                   Ask Our Consultants
                 </Button>
               </div>
@@ -210,7 +210,7 @@ export function PMALandingPage() {
                 <Button 
                   size="lg" 
                   className="w-full bg-brand-gold hover:bg-[#a37a33] text-[#1a1614] border-none font-bold text-lg"
-                  onClick={() => window.open("https://app.linktochat.id/api/pr/blegal", "_blank")}
+                  onClick={() => window.open("https://wa.me/62816570755", "_blank")}
                 >
                   Start Application
                 </Button>

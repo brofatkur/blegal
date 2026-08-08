@@ -99,7 +99,7 @@ export function ServiceGrid({ lang = 'id' }: { lang?: 'id' | 'en' }) {
                   ))}
                 </ul>
                 <button 
-                  onClick={() => window.open(`https://app.linktochat.id/api/pr/blegal`, "_blank")}
+                  onClick={() => window.open(`https://wa.me/62816570755`, "_blank")}
                   className="text-brand-brown font-bold text-sm hover:text-brand-gold transition-colors flex items-center gap-2 group/btn"
                 >
                   {t.btn}
