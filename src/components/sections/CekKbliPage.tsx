@@ -7,7 +7,7 @@ export function CekKbliPage() {
   }, []);
 
   return (
-    <div className="w-full h-[calc(100vh-64px)]">
+    <div className="w-full h-screen">
       <iframe
         src="https://brofatkur.github.io/blegal-kbli/"
         className="w-full h-full border-0"
