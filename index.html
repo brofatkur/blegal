@@ -34,6 +34,20 @@
       fbq('track', 'PageView');
     </script>
     <!-- End Facebook Pixel Code -->
+    <!-- Konektor Tracking Code -->
+    <script>
+    !function(w,d,t,u,k,a,m){w['KonektorObject']=k;w[k]=w[k]||function(){
+    (w[k].q=w[k].q||[]).push(arguments)},w[k].l=1*new Date();a=d.createElement(t),
+    m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+    }(window,document,'script','https://cdn.konektor.id/tracker.min.js','konektor');
+
+    konektor('init', 'WS-B11XB9');
+    // Default browserTags.autoLoad is false.
+    // If you want Konektor to auto-load platform scripts (Meta/Google/TikTok/LinkedIn),
+    // edit init to: konektor('init', 'WS-B11XB9', { browserTags: { autoLoad: true } });
+    konektor('track', 'PageView');
+    </script>
+    <!-- End Konektor Tracking Code -->
   </head>
   <body>
     <!-- Facebook Pixel Code (noscript) -->
