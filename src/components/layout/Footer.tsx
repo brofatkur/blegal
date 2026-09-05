@@ -16,7 +16,7 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-300 text-sm mb-4">
-              PT Bonanza Tujuh Samudera
+              PT BOFFICE GLOBAL VENTURA
             </p>
             <p className="text-gray-300 text-sm leading-relaxed">
               Partner legal terpercaya untuk pendirian badan usaha dan perizinan bisnis Anda. Profesional, cepat, dan aman.
@@ -60,7 +60,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-xs text-gray-400">
-          &copy; {new Date().getFullYear()} PT Bonanza Tujuh Samudera. All rights reserved.
+          &copy; {new Date().getFullYear()} PT BOFFICE GLOBAL VENTURA. All rights reserved.
         </div>
       </div>
     </footer>
